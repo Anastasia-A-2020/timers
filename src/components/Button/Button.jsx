@@ -5,12 +5,11 @@ import { addNewObjToResult } from "../../redux/slices/appSlice";
 export function Button({ seconds }) {
   const dispatch = useDispatch();
 
-  const onButtonClick = () => {
-    const button = Number(seconds);
+  const onButtonClick = async () => {
     const click = new Date();
 
     const obj = {
-      button,
+      seconds: Number(seconds),
       click,
     };
     dispatch(addNewObjToResult(obj));
