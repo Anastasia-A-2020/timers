@@ -5,4 +5,6 @@ export const store = configureStore({
   reducer: {
     app: appSliceReducer,
   },
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware({ serializableCheck: false }),
 });
